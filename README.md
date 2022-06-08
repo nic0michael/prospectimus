@@ -1,1 +1,1 @@
-# prospectimus the Sales prospecting program
+# Prospectimus the Sales prospecting program
