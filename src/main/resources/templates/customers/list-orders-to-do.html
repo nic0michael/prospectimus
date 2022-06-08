@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layouts :: header">
+  <title>Orders to be processed List</title>   
+</head>
+<body>
+
+	<nav th:replace="layouts :: navbarOrdersToDo"></nav>
+	
+	<div sec:authorize="!isAuthenticated()">
+		You are not authenticated<br>
+		<a href="/login">Login</a>	
+	</div>
+	
+	<div sec:authorize="isAuthenticated()">
+	<div>
+		<h4>Orders to be processed List</h4>
+		<br>
+				
+		<div align="left">
+			<img src="http://localhost:8080/images/PizzaChef.jpeg" width="200" height="150"/>
+		</div>
+	
+		<div>			
+			<a th:href="@{/business-dashboard/orders-to-do/list}" class="btn-primary btn-sm mb-3" >Reload Customer Orders To Do</a>
+		</div>
+		
+		<br>
+		<table class="table table-bordered table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>Order Number</th>
+					<th>Date</th>
+					<th>Customer</th>
+					<th>Product</th>					
+					<th>Quantity</th>
+					<th>CustomerRequirements</th>
+					<th>Order Completed</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="aCustomerOrder : ${customerOrderList}">
+					<td th:text="${aCustomerOrder.customerOrderId}"></td>
+					<td th:text="${aCustomerOrder.dateCreated}"></td>
+					<td th:text="${aCustomerOrder.customerName}"></td>
+					<td th:text="${aCustomerOrder.productName}"></td>
+					<td th:text="${aCustomerOrder.quantity}"></td>
+					<td th:text="${aCustomerOrder.customerRequirements}"></td>
+					<td th:text="${aCustomerOrder.orderCompleted}"></td>
+					
+					<td>
+					 <div>
+					 	<a th:href="@{/business-dashboard/orders-to-do/completed/(id=${aCustomerOrder.customerOrderId})}" class="btn-info btn-sm" >Completed</a>
+				  	 </div>		
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</div>
+
+
+</body>
+</html>

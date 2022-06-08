@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: header">
+  <title>Business Dashboard</title>
+</head>
+<body>
+	<nav th:replace="layouts :: navbarConfiguration"></nav>
+	<div sec:authorize="hasRole('ADMIN')">
+
+		
+
+		<br>
+		<div class="container">
+
+			<H3>Edit Configuration</H3>
+		<br><br>
+			<form th:action="@{/business-dashboard/configuration/update}"
+				th:object="${configurationRequest}" method="POST">
+
+
+				<!--  This will be used to bind to the employee that was clicked on (USED FOR UPDATES)-->
+				<input type="hidden"
+					th:field="${configurationRequest.configurationId}" />   
+
+				<div class="form-group row">
+					<input type="text" placeholder="Company Name"
+						th:field="${configurationRequest.companyName}"> <span
+						style="color: red" th:if="${#fields.hasErrors('companyName')}"
+						th:errors="${configurationRequest.companyName}"> </span>
+				</div>
+
+				<div class="form-group row">
+					<input type="text" placeholder="Branch Name"
+						th:field="${configurationRequest.branchName}"> <span
+						style="color: red" th:if="${#fields.hasErrors('branchName')}"
+						th:errors="${configurationRequest.branchName}"> </span>
+				</div>
+
+				<div class="form-group row">
+					<input type="text" placeholder="Branch Telephone Number"
+						th:field="${configurationRequest.branchPhone}"> <span
+						style="color: red" th:if="${#fields.hasErrors('branchPhone')}"
+						th:errors="${configurationRequest.branchPhone}"> </span>
+				</div>
+
+				<div class="form-group row">
+					<input type="text" placeholder="Industry"
+						th:field="${configurationRequest.industry}"> <span
+						style="color: red" th:if="${#fields.hasErrors('industry')}"
+						th:errors="${configurationRequest.industry}"> </span>navbarConfiguration
+				</div>
+				
+				<div class="form-group row">
+					<input type="text" placeholder="Discount Percentage"
+						th:field="${configurationRequest.discount}"> <span
+						style="color: red" th:if="${#fields.hasErrors('discount')}"
+						th:errors="${configurationRequest.discount}"> </span>
+				</div>
+
+				
+				<div class="form-group row">
+					<input type="text" placeholder="Branch Email Address"
+						th:field="${configurationRequest.email}"> <span
+						style="color: red" th:if="${#fields.hasErrors('email')}"
+						th:errors="${configurationRequest.email}"> </span>
+				</div>
+
+				
+				<b>Is Configuration Enabled:</b>
+				<div class="form-group row">
+					<select th:field="${configurationRequest.enabled}">
+						<option value="1" selected>Yes</option>
+						<option value="0">No</option>
+					</select>
+				</div>
+
+				<div class="form-group row">
+					<button class="btn btn-info col-2" type="submit">Save
+						Configuration</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>
