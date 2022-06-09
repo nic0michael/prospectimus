@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import za.co.prospectimus.dtos.ConfigurationRequest;
-import za.co.prospectimus.logic.BusinessLogicProcessor;
+import za.co.prospectimus.helper.ConfigurationHelper;
 import za.co.prospectimus.model.Configuration;
-import za.co.prospectimus.model.Employee;
 import za.co.prospectimus.utils.RequestResponseUtils;
 
 @Controller
@@ -25,9 +24,8 @@ import za.co.prospectimus.utils.RequestResponseUtils;
 public class ConfigurationController {
 	private static final Logger log = LoggerFactory.getLogger(ConfigurationController.class);
 	
-
 	@Autowired
-	BusinessLogicProcessor processor;
+	ConfigurationHelper processor;
 	
 	@GetMapping
 	public String displayConfigurationHome(Model model) {
@@ -35,6 +33,14 @@ public class ConfigurationController {
 		model.addAttribute("configurationList", configurations);
 
 		return "configuration/list-configurations";
+	}
+
+	public String listallConfigs(Model model) {
+		List<Configuration> configurations = processor.findAllConfigurations();
+		model.addAttribute("configurationList", configurations);
+
+		return "configuration/list-configurations";
+		
 	}
 
 	@GetMapping(value = "/list")

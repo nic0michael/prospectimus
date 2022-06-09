@@ -5,21 +5,16 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import za.co.prospectimus.logic.BusinessLogicProcessor;
+import za.co.prospectimus.helper.ConfigurationHelper;
 import za.co.prospectimus.servicemanagers.EmployeeServiceManager;
 
 
@@ -32,7 +27,7 @@ public class HomeController {
 	private EmployeeServiceManager emplmod;
 	
 	@Autowired
-	BusinessLogicProcessor processor;
+	ConfigurationHelper processor;
 	
 	
 	@Value("${project.version}")

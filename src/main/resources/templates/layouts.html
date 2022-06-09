@@ -94,32 +94,21 @@
 					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer_contacts/list}">Customer Contacts</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/industries/list}">Industries</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/market_segment/list}">Market Segments</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
+			
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
 				</li>
@@ -131,150 +120,35 @@
 	</nav>
 
 
-	<nav th:fragment="navbarCustomerOrder"
-		class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Business Dashboard</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
-				</li>				
-				<li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/logout}">Logout</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	
-	
-	<nav th:fragment="navbarOrdersToDo"
-		class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Business Dashboard</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
-				</li>				
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/logout}">Logout</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
 
-	
-	<nav th:fragment="navbarProduct"
+	<nav th:fragment="navbarCustomerContacts"
 		class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Business Dashboard</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarNav" aria-controls="navbarNav"
 			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span><li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Base Antennas</a>
-				</li>
+			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
+				<li class="nav-item active">
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer_contacts/list}">Customer Contacts</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{/prospectus-dashboard/industries/list}">Industries</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/market_segment/list}">Market Segments</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
 				</li>
@@ -284,6 +158,8 @@
 			</ul>
 		</div>
 	</nav>
+	
+	
 
 	<nav th:fragment="navbarCustomer"
 		class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -299,32 +175,20 @@
 					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer_contacts/list}">Customer Contacts</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/industries/list}">Industries</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/market_segment/list}">Market Segments</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
 				</li>
@@ -335,7 +199,7 @@
 		</div>
 	</nav>
 	
-	<nav th:fragment="navbarInventory"
+	<nav th:fragment="navbarIndustries"
 		class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Business Dashboard</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -349,32 +213,23 @@
 					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer_contacts/list}">Customer Contacts</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
-				</li>
 				<li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/industries/list}">Industries</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/market_segment/list}">Market Segments</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
 				</li>
@@ -385,7 +240,7 @@
 		</div>
 	</nav>
 	
-	<nav th:fragment="navbarSupplier"
+	<nav th:fragment="navbarMarketSegments"
 		class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Business Dashboard</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -399,32 +254,23 @@
 					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer_contacts/list}">Customer Contacts</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/industries/list}">Industries</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/market_segment/list}">Market Segments</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
 				</li>
@@ -434,6 +280,7 @@
 			</ul>
 		</div>
 	</nav>
+	
 
 	<nav th:fragment="navbarEMP"
 		class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -449,33 +296,24 @@
 					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer_contacts/list}">Customer Contacts</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/industries/list}">Industries</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/market_segment/list}">Market Segments</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
-				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
 				</li>
 				<li class="nav-item">
@@ -486,106 +324,8 @@
 	</nav>
 	
 	
-	<nav th:fragment="navbarSupplierOrders"
-		class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Business Dashboard</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/logout}">Logout</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
 	
 	
-	<nav th:fragment="navbarGratuities"
-		class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Business Dashboard</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
-				</li>
-				    <li class="nav-item active">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/logout}">Logout</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
 
 	<nav th:fragment="navbarConfiguration"
 		class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -601,32 +341,20 @@
 					<a class="nav-link" href="/prospectus-dashboard/home">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/customer-orders/list}">Customer Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/orders-to-do/list}">Orders to do</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/customer_contacts/list}">Customer Contacts</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/customers/list}">Customers</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/products/list}">Products</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/industries/list}">Industries</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/inventory/list}">Inventory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/supplier-orders/list}">Supplier Orders</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/suppliers/list}">Suppliers</a>
+					<a class="nav-link" th:href="@{/prospectus-dashboard/market_segment/list}">Market Segments</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/employees}">Employees</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" th:href="@{/prospectus-dashboard/graduity/list}">Gratuities</a>
-				</li>				
 				<li class="nav-item active">
 					<a class="nav-link" th:href="@{/prospectus-dashboard/configuration}">Configuration</a>
 				</li>

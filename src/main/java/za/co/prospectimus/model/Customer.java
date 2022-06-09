@@ -17,16 +17,19 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "customer_id")
-	private Long customerId;
+	private Long customerId;	
+
+	@Column(name = "idustry_id")
+	private Long industryId;
+	
+	@Column(name = "market_segment_id")
+	private Long marketSegmentId;
 
 	@Column(name = "date_created")
 	private Timestamp dateCreated;
 
 	@Column(name = "name", length=256)
 	private String name; 
-	
-	@Column(name = "credits")
-	private Long credits;
 	
 	@Column(name = "delivery_address", length=256)
 	private String deliveryAddress;
@@ -39,6 +42,31 @@ public class Customer {
 	
 	@Column(name = "cell_phone", length=128)
 	private String cellPhone;
+	
+	@Column(name = "industry", length=256)
+	private String industry;
+	
+	@Column(name = "market_segment", length=256)
+	private String marketSegment;
+
+	@Column(name = "region", length=2048)
+	private String region;
+
+	public Long getIndustryId() {
+		return industryId;
+	}
+
+	public void setIndustryId(Long industryId) {
+		this.industryId = industryId;
+	}
+
+	public Long getMarketSegmentId() {
+		return marketSegmentId;
+	}
+
+	public void setMarketSegmentId(Long marketSegmentId) {
+		this.marketSegmentId = marketSegmentId;
+	}
 
 	public Timestamp getDateCreated() {
 		return dateCreated;
@@ -54,21 +82,6 @@ public class Customer {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-
-
-
-	public Long getCredits() {
-		return credits;
-	}
-
-	public void setCredits(Long credits) {
-		this.credits = credits;
-	}
-
-	public Long getCustomerId() {
-		return customerId;
 	}
 
 	public String getDeliveryAddress() {
@@ -103,17 +116,44 @@ public class Customer {
 		this.cellPhone = cellPhone;
 	}
 
-	@Override
-	public String toString() {
-		return "Customer [customerId=" + customerId + ", dateCreated=" + dateCreated + ", name=" + name + ", credits="
-				+ credits + ", deliveryAddress=" + deliveryAddress + ", invoiceAddress=" + invoiceAddress
-				+ ", emailAddress=" + emailAddress + ", cellPhone=" + cellPhone + "]";
+	public String getIndustry() {
+		return industry;
 	}
 
+	public void setIndustry(String industry) {
+		this.industry = industry;
+	}
 
+	public String getMarketSegment() {
+		return marketSegment;
+	}
 
+	public void setMarketSegment(String marketSegment) {
+		this.marketSegment = marketSegment;
+	}
 
+	public String getRegion() {
+		return region;
+	}
 
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
+	public Long getCustomerId() {
+		return customerId;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", industryId=" + industryId + ", marketSegmentId="
+				+ marketSegmentId + ", dateCreated=" + dateCreated + ", name=" + name + ", deliveryAddress="
+				+ deliveryAddress + ", invoiceAddress=" + invoiceAddress + ", emailAddress=" + emailAddress
+				+ ", cellPhone=" + cellPhone + ", industry=" + industry + ", marketSegment=" + marketSegment
+				+ ", region=" + region + "]";
+	}
+
+	
 	
 	
 	
