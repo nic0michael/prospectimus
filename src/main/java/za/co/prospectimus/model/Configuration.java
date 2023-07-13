@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
+import jakarta.persistence.*;
+
 import org.springframework.lang.NonNull;
 
 @Entity
