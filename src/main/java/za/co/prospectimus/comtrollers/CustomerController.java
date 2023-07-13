@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import za.co.prospectimus.dtos.CustomerRequest;
+import za.co.prospectimus.enums.ProjectDetails;
 import za.co.prospectimus.helper.CustomerContactHelper;
 import za.co.prospectimus.helper.CustomerHelper;
 import za.co.prospectimus.helper.IndustryHelper;
@@ -26,13 +27,10 @@ import za.co.prospectimus.servicemanagers.EmployeeServiceManager;
 @Controller
 @RequestMapping("/prospectus-dashboard/customers")
 public class CustomerController {
-	private static final Logger log = LoggerFactory.getLogger(CustomerController.class);
-	
-	@Value("${project.version}")
-	private String projectVersion;
-	
-	@Value("${project.name}")
-	private String projectName;
+	private static final Logger log = LoggerFactory.getLogger(CustomerController.class);	
+
+	private String projectVersion=ProjectDetails.DEFAULT.projectVersion();
+	private String projectName=ProjectDetails.DEFAULT.projectName();
 	
 
 	@Autowired

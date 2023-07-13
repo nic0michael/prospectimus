@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import za.co.prospectimus.dtos.ConfigurationRequest;
+import za.co.prospectimus.enums.ProjectDetails;
 import za.co.prospectimus.helper.ConfigurationHelper;
 import za.co.prospectimus.model.Configuration;
 import za.co.prospectimus.utils.RequestResponseUtils;
@@ -23,6 +24,9 @@ import za.co.prospectimus.utils.RequestResponseUtils;
 @RequestMapping("/prospectus-dashboard/configuration")
 public class ConfigurationController {
 	private static final Logger log = LoggerFactory.getLogger(ConfigurationController.class);
+
+	private String projectVersion=ProjectDetails.DEFAULT.projectVersion();
+	private String projectName=ProjectDetails.DEFAULT.projectName();
 	
 	@Autowired
 	ConfigurationHelper processor;

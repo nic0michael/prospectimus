@@ -1,7 +1,9 @@
 package za.co.prospectimus.model;
 import java.util.Objects;
+
 import java.util.Date;
 import java.util.List;
+import jakarta.persistence.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

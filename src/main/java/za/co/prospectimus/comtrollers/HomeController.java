@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import za.co.prospectimus.enums.ProjectDetails;
 import za.co.prospectimus.helper.ConfigurationHelper;
 import za.co.prospectimus.servicemanagers.EmployeeServiceManager;
 
@@ -23,18 +24,14 @@ import za.co.prospectimus.servicemanagers.EmployeeServiceManager;
 public class HomeController {
 	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
 
+	private String projectVersion=ProjectDetails.DEFAULT.projectVersion();
+	private String projectName=ProjectDetails.DEFAULT.projectName();
+
 	@Autowired
 	private EmployeeServiceManager emplmod;
 	
 	@Autowired
 	ConfigurationHelper processor;
-	
-	
-	@Value("${project.version}")
-	private String projectVersion;
-	
-	@Value("${project.name}")
-	private String projectName;
 
 	@GetMapping("prospectus-dashboard") //prospectus-dashboard
 	public String displayHome1(Model model) {

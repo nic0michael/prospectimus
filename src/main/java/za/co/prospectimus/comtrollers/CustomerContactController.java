@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import za.co.prospectimus.dtos.CustomerContactRequest;
+import za.co.prospectimus.enums.ProjectDetails;
 import za.co.prospectimus.helper.CustomerContactHelper;
 import za.co.prospectimus.helper.CustomerHelper;
 import za.co.prospectimus.helper.EmployeeHelper;
@@ -31,15 +32,11 @@ import za.co.prospectimus.utils.RequestResponseUtils;
 public class CustomerContactController {
 
 	private static final Logger log = LoggerFactory.getLogger(CustomerContactController.class);
+
+	private String projectVersion=ProjectDetails.DEFAULT.projectVersion();
+	private String projectName=ProjectDetails.DEFAULT.projectName();
 	
 	private final double DISCOUNT_PERCENTAGE=10;
-
-	@Value("${project.version}")
-	private String projectVersion;
-
-	@Value("${project.name}")
-	private String projectName;
-
 	@Autowired
 	CustomerHelper customerHelper;
 	

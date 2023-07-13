@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import za.co.prospectimus.dtos.EmployeePersistRequest;
+import za.co.prospectimus.enums.ProjectDetails;
 import za.co.prospectimus.model.Employee;
 import za.co.prospectimus.security.SecurityValidator;
 import za.co.prospectimus.servicemanagers.EmployeeServiceManager;
@@ -26,6 +27,9 @@ import za.co.prospectimus.utils.Utils;
 @RequestMapping("/prospectus-dashboard/employees")
 public class EmployeeController {
 	private static final Logger log = LoggerFactory.getLogger(EmployeeController.class);
+
+	private String projectVersion=ProjectDetails.DEFAULT.projectVersion();
+	private String projectName=ProjectDetails.DEFAULT.projectName();
 
 	@Autowired 
 	EmployeeServiceManager emplmod;	

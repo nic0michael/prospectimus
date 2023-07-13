@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import za.co.prospectimus.enums.ProjectDetails;
 import za.co.prospectimus.helper.MarketSegmentHelper;
 import za.co.prospectimus.model.MarketSegment;
 
@@ -19,6 +20,9 @@ import za.co.prospectimus.model.MarketSegment;
 public class MarketSegmentController {	
 	private static final Logger log = LoggerFactory.getLogger(MarketSegmentController.class);
 
+	private String projectVersion=ProjectDetails.DEFAULT.projectVersion();
+	private String projectName=ProjectDetails.DEFAULT.projectName();
+	
 	@Autowired
 	MarketSegmentHelper processor;
 	
